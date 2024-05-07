@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Contenido del formulario de inicio de sesión -->
+<div class="container">
+    <h1>Iniciar Sesión</h1>
+    <form id="loginForm" action="/tu-servidor/login" method="POST">
+        <!-- Aquí van los campos del formulario (nombre de usuario, contraseña, etc.) -->
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+</div>
+
+<!-- Script para redirigir después de iniciar sesión -->
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    // Evita que se envíe el formulario por defecto
+    event.preventDefault();
+
+    // Aquí puedes realizar la lógica para enviar los datos del formulario y autenticar al usuario
+    // (puedes usar fetch, Axios u otra librería para hacer una solicitud POST al servidor)
+
+    // Simulación de inicio de sesión exitoso
+    // (aquí deberías hacer la solicitud al servidor para autenticar al usuario)
+    const isAuthenticated = true; // Simulación de éxito al autenticar al usuario
+
+    if (isAuthenticated) {
+        // Redirige al usuario a la página de inicio después de iniciar sesión
+        window.location.href = "index.html";
+    } else {
+        // Manejar caso de error al iniciar sesión
+        alert("Credenciales incorrectas. Inténtalo de nuevo.");
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Contenido del formulario de creación de cuenta -->
+<div class="container">
+    <h1>Crear Cuenta</h1>
+    <form id="signupForm" action="/tu-servidor/crear_cuenta" method="POST">
+        <!-- Aquí van los campos del formulario (nombre, apellidos, etc.) -->
+        <button type="submit">Crear Cuenta</button>
+    </form>
+</div>
+
+<!-- Script para redirigir después de crear la cuenta -->
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    // Evita que se envíe el formulario por defecto
+    event.preventDefault();
+
+    // Aquí puedes realizar la lógica para enviar los datos del formulario y crear la cuenta
+    // (puedes usar fetch, Axios u otra librería para hacer una solicitud POST al servidor)
+
+    // Simulación de creación de cuenta exitosa
+    // (aquí deberías hacer la solicitud al servidor para crear la cuenta)
+    const isAccountCreated = true; // Simulación de éxito al crear la cuenta
+
+    if (isAccountCreated) {
+        // Redirige al usuario a la página de inicio después de crear la cuenta
+        window.location.href = "index.html";
+    } else {
+        // Manejar caso de error al crear la cuenta
+        alert("Error al crear la cuenta. Inténtalo de nuevo.");
+    }
+});
+</script>
+
+</body>
+</html>
